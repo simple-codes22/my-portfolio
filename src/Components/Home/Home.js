@@ -5,7 +5,12 @@ import GitHub from '@material-ui/icons/GitHub';
 import FaceBook from '@material-ui/icons/Facebook';
 import LinkedIn from '@material-ui/icons/LinkedIn';
 import Twitter from '@material-ui/icons/Twitter';
-import Navigation from './Inner Components/Navigation'
+import Navigation from './Inner Components/Navigation';
+import Introduction from './Inner Components/Introduction';
+import StackView from './Inner Components/StackView';
+import Projects from './Inner Components/Projects';
+import Contact from './Inner Components/Contact';
+import Footer from "./Inner Components/Footer";
 
 /* What the HomePage component contains (should): 
     - A Fixed bar containing social media icons which references to my account.
@@ -24,6 +29,10 @@ const homeStyles = makeStyles(theme => ({
         top: '0',
         justifyContent: 'flex-end',
         alignItems: 'center',
+        zIndex:'-1000',
+        '& > div:hover &': {
+            zIndex:'1',
+        }
     },
     iconItem: {
         width: '45px',
@@ -87,10 +96,10 @@ const Home = () => {
         return (
             <Box component='div' className={useStyle.refIconsBox}>
                 <Box component='section' className="iconBar">
-                    <Box component='div' className={`${useStyle.iconItem} ${useStyle.gitHub}`}><a href='https://www.github.com/simple-codes22' rel="noreferrer" target='_blank'><GitHub /></a></Box>
-                    <Box component='div' className={`${useStyle.iconItem} ${useStyle.facebook}`}><a href='https://www.github.com/simple-codes22' rel="noreferrer" target='_blank'><FaceBook /></a></Box>
-                    <Box component='div' className={`${useStyle.iconItem} ${useStyle.twitter}`}><a href='https://www.github.com/simple-codes22' rel="noreferrer" target='_blank'><Twitter /></a></Box>
-                    <Box component='div' className={`${useStyle.iconItem} ${useStyle.linkedin}`}><a href='https://www.github.com/simple-codes22' rel="noreferrer" target='_blank'><LinkedIn /></a></Box>
+                    <Box component='div' className={`${useStyle.iconItem} ${useStyle.gitHub}`}><a href='https://www.github.com/simple-codes22' rel="noreferrer" target='_blank' title='Visit my GitHub account'><GitHub /></a></Box>
+                    <Box component='div' className={`${useStyle.iconItem} ${useStyle.facebook}`}><a href='https://www.github.com/simple-codes22' rel="noreferrer" target='_blank' title='Visit my Facebook account'><FaceBook /></a></Box>
+                    <Box component='div' className={`${useStyle.iconItem} ${useStyle.twitter}`}><a href='https://www.github.com/simple-codes22' rel="noreferrer" target='_blank' title='Visit my Twitter account'><Twitter /></a></Box>
+                    <Box component='div' className={`${useStyle.iconItem} ${useStyle.linkedin}`}><a href='https://www.github.com/simple-codes22' rel="noreferrer" target='_blank' title='Visit my LinkedIn account'><LinkedIn /></a></Box>
                 </Box>
             </Box>    
         )
@@ -100,7 +109,12 @@ const Home = () => {
         <div>
             <ReferenceIcons />
             <Navigation />
-            <a href="https://www.google.com/">Hello world</a>
+            <Introduction />
+            <StackView />
+            <Projects />
+            <Contact />
+            <Footer />
+            {/* <a href="https://www.google.com/">Hello world</a> */}
         </div>
     )
 }

@@ -8,7 +8,7 @@ const MainTheme = createTheme({
       main: '#6f7dfa'
     },
     secondary: {
-      main: '#fff'
+      main: '#f3f3f3'
     }
   },
   typography: {
