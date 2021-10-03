@@ -5,9 +5,11 @@ import GitHub from '@material-ui/icons/GitHub';
 import FaceBook from '@material-ui/icons/Facebook';
 import LinkedIn from '@material-ui/icons/LinkedIn';
 import Twitter from '@material-ui/icons/Twitter';
+import Navigation from './Inner Components/Navigation'
 
 /* What the HomePage component contains (should): 
-    - A Fixed 
+    - A Fixed bar containing social media icons which references to my account.
+    - The Navigation Bar.
 */
 
 const homeStyles = makeStyles(theme => ({
@@ -96,7 +98,8 @@ const Home = () => {
     
     return (
         <div>
-            <ReferenceIcons />d
+            <ReferenceIcons />
+            <Navigation />
             <a href="https://www.google.com/">Hello world</a>
         </div>
     )
